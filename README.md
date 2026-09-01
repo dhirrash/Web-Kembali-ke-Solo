@@ -43,11 +43,11 @@ Secara spesifik, RE:LOOP menyasar sisi **reuse** dan **prevention/reduction** da
 
 ## Mockup Kasar Sederhana
 
+<img width="1920" height="2700" alt="home" src="https://github.com/user-attachments/assets/26e91ace-5408-4d61-acc3-345567502be3" />
+<img width="1920" height="1080" alt="create" src="https://github.com/user-attachments/assets/a77d8cee-761d-475a-b61b-5f652c04d1e3" />
 <img width="1920" height="1080" alt="hasil" src="https://github.com/user-attachments/assets/748a3c2a-ba9a-49e4-8737-d8b531e1221b" />
 <img width="1920" height="1620" alt="explore" src="https://github.com/user-attachments/assets/5d10befa-3dd4-4015-ba5d-83e7b602965b" />
-<img width="1920" height="1080" alt="create" src="https://github.com/user-attachments/assets/a77d8cee-761d-475a-b61b-5f652c04d1e3" />
 <img width="1920" height="1080" alt="tutorial" src="https://github.com/user-attachments/assets/9e88ffdd-db92-4a4f-b34d-2eb3b963eeb5" />
-<img width="1920" height="2700" alt="home" src="https://github.com/user-attachments/assets/26e91ace-5408-4d61-acc3-345567502be3" />
 
 ---
 
