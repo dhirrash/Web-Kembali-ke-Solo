@@ -1,14 +1,12 @@
 # Web-Kembali-ke-Solo
 
-# GunaUlang
+# RE:LOOP
 
-> *Nama masih placeholder — silakan diganti sesuai selera.*
-
-Web app berbasis AI yang membantu pengguna memaksimalkan kegunaan barang bekas melalui rekomendasi **reuse**, **upcycle**, atau **recycle**. Dibangun sebagai tugas kuliah dengan mengangkat isu **SDG 12.5**.
+Web app berbasis AI yang membantu pengguna memaksimalkan kegunaan barang bekas melalui rekomendasi **reuse** dan **upcycle** untuk mendukung program **SDG 12.5**.
 
 ## 🌱 Latar Belakang
 
-**Masalah:** Banyak barang bekas dibuang begitu saja padahal masih bisa dimanfaatkan kembali (*reuse*), diubah jadi barang baru (*upcycle*), atau setidaknya diproses ulang jadi bahan baku (*recycle*). Kebanyakan orang tidak tahu barang bekas yang mereka miliki sebenarnya bisa "jadi apa".
+**Masalah:** Banyak barang bekas dibuang begitu saja padahal masih bisa dimanfaatkan kembali (*reuse*) atau diubah jadi barang baru (*upcycle*). Kebanyakan orang tidak tahu barang bekas yang mereka miliki sebenarnya bisa "jadi apa".
 
 **Solusi:** Pengguna cukup memberi tahu barang apa yang mereka miliki (foto + nama + kondisi), lalu AI menganalisis dan memberi rekomendasi arah pemanfaatan terbaik — lengkap dengan contoh ide. Tersedia juga jalur sebaliknya: menjelajahi ide/tutorial berdasarkan **produk** yang ingin dibuat.
 
