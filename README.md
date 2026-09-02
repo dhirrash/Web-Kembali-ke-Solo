@@ -42,6 +42,7 @@ Secara spesifik, RE:LOOP menyasar sisi **reuse** dan **prevention/reduction** da
 ---
 
 ## Mockup Kasar Sederhana
+[Proto Figma](https://www.figma.com/proto/iQwkhNwcvqLeDA12SKWtfh/Untitled?node-id=47-191&page-id=0%3A1&starting-point-node-id=2%3A3&scaling=scale-down-width&content-scaling=fixed&t=FlCSgyTEAMaF0Owy-1)
 
 <img width="1920" height="2700" alt="home" src="https://github.com/user-attachments/assets/26e91ace-5408-4d61-acc3-345567502be3" />
 <img width="1920" height="1080" alt="create" src="https://github.com/user-attachments/assets/a77d8cee-761d-475a-b61b-5f652c04d1e3" />
