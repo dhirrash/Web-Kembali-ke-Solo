@@ -1,0 +1,116 @@
+header {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 32px;
+    gap: 24px;
+    font-size: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "kode mono", monospace;
+    font-weight: 700;
+    color: #2AD400;
+}
+
+.title {
+    height: calc(100vh - 80px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    margin: 0;
+    line-height: 0.8;
+    font-size: 120px;
+    font-family: "Kodchasan", sans-serif;
+    color: #2AD400;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title h1 span {
+    font-family: "Jua", sans-serif;
+}
+
+.title h6 {
+    margin: 0;
+    font-size: 24px;
+    font-family: "Kode Mono", monospace;
+    color: #74D65C;
+}
+
+body {
+    margin: 0;
+    height: 300vh;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #064d19 100%
+    );
+}
+
+.info-block {
+    max-width: 320px;
+    margin: 3rem 2rem;
+}
+
+.info-block h3 {
+    font-family: 'Jua', sans-serif;
+    font-size: 1.7rem;        
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+}
+
+.info-block p {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 1.2rem;       
+    line-height: 1.6;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.info-block {
+    margin: 15rem 5rem;  
+}
+
+.info-left {
+    margin-right: auto;
+    text-align: left;
+    color:#ffffff
+}
+
+.info-right {
+    margin-left: auto;
+    text-align: right;
+    color:#ffffff
+}
+
+.back-to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 3rem auto;
+    font-family: 'Kode Mono', monospace;
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: #ffffff;
+    width: fit-content;
+}
+
+.back-to-top .arrow {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
