@@ -1,0 +1,1139 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 32px;
+    gap: 24px;
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "kode mono", monospace;
+    font-weight: 700;
+    color: #2AD400;
+    z-index: 10;
+}
+
+.title {
+    height: calc(100vh - 80px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+.title h1 {
+    margin: 0;
+    line-height: 0.8;
+    font-size: 120px;
+    font-family: "Kodchasan", sans-serif;
+    color: #2AD400;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title h1 span {
+    font-family: "Jua", sans-serif;
+}
+
+.title h6 {
+    margin: 0;
+    font-size: 24px;
+    font-family: "Kode Mono", monospace;
+    color: #74D65C;
+}
+
+body.home {
+    margin: 0;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 480px,
+        #6A9475 960px,
+        #064d19 100%
+    );
+}
+
+.info-block {
+    max-width: 560px;
+    margin: 160px 5rem;
+}
+
+.info-block h3 {
+    font-family: 'kode mono', monospace;
+    line-height: 0;
+    font-size: 1.7rem;        
+    margin-bottom: 0.8rem;
+}
+
+.info-block p {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 1.2rem;       
+    line-height: 1.5;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.info-left {
+    margin-right: auto;
+    text-align: left;
+    color:#ffffff
+}
+
+.info-right {
+    margin-left: auto;
+    text-align: right;
+    color:#ffffff
+}
+
+.back-to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 3rem auto;
+    font-family: 'Kode Mono', monospace;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    width: fit-content;
+}
+
+.back-to-top .arrow {
+    font-size: 24px;
+    margin-top: 80px;
+    margin-bottom: 0.1rem;
+}
+
+/*================== create.html ==================*/
+
+.create-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.upload-box {
+    width: 430px;
+    height: 430px;
+
+    border: 10px solid #aee9a0;
+    border-radius: 20px;
+
+    background-color: #e5f7e1;
+}
+
+.upload-box p {
+    font-family: "kode mono", monospace;
+    font-weight: bold;
+    opacity: 70%;
+}
+
+.upload-box.dragover {
+    background-color: #ccefc6;
+    border-color: #20b91b;
+}
+
+#image-upload {
+    display: none;
+}
+
+.upload-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #39d52f;
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 70px;
+    height: 70px;
+
+    border: 3px dotted #39d52f;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+}
+
+.upload-content p {
+    margin: 12px 0 4px;
+    font-size: 18px;
+}
+
+.upload-content span {
+    font-size: 14px;
+}
+
+.item-form {
+    width: 600px;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group > label {
+    display: block;
+    font-size: 20px;
+    font-family: 'kodchasan', sans-serif;
+    margin-bottom: 7px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 93%;
+    height: 50px;
+
+    border: 3px solid #00cf00;
+    border-radius: 30px;
+
+    padding: 0 20px;
+    font-size: 20px;
+
+    outline: none;
+}
+
+textarea {
+    width: 93%;
+    height: 100px;
+
+    border: 3px solid #00cf00;
+    border-radius: 25px;
+
+    padding: 15px 20px;
+    font-size: 18px;
+
+    resize: none;
+    outline: none;
+}
+
+.rating {
+    width: 430px;
+}
+
+.rating-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    font-family: "Kode Mono", monospace;
+    font-size: 14px;
+}
+
+.rating input[type="range"] {
+    width: 100%;
+    height: 8px;
+    margin: 0px;
+    appearance: none;
+    background: linear-gradient(
+        to right,
+        red,
+        orange,
+        #39d52f
+    );
+    border-radius: 10px;
+}
+
+.rating input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #e1e1e1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+
+    width: 200px;
+    height: 50px;
+
+    border: none;
+    border-radius: 35px;
+
+    background-color: #12d900;
+    color: white;
+
+    font-family: 'kode mono', monospace;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0fbe00;
+}
+
+/*================== loading.html ==================*/
+
+body.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #A9C6AE;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.spinner img {
+    width: 80px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 16px;
+    font-family: 'kode mono', monospace;
+    color: #ffffff;
+}
+
+/*================== Explore ==================*/
+
+body.explore {
+    margin: 0;
+    background: linear-gradient(
+        180deg,
+        #f0f9ed 0%,
+        #e8f5e0 50%,
+        #dff0d8 100%
+    );
+    min-height: 100vh;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.explore-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 32px;
+}
+
+/* ===== Search Section ===== */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    margin-top: 60px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.search-input {
+    width: 100%;
+    height: 60px;
+    
+    border: 3px solid #39d52f;
+    border-radius: 50px;
+    
+    padding: 0 70px 0 70px;
+    font-size: 18px;
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 500;
+    
+    background-color: #ffffff;
+    color: #39d52f;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #39d52f;
+    opacity: 0.7;
+}
+
+.search-input:focus {
+    border-color: #2AD400;
+    box-shadow: 0 0 20px rgba(58, 213, 47, 0.2);
+    background-color: #f9fff7;
+}
+
+/* ===== Ideas Grid ===== */
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.idea-card {
+    background: linear-gradient(135deg, #e8f7e1 0%, #d4f0cc 100%);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.idea-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(58, 213, 47, 0.2);
+}
+
+.card-illustration {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(180deg, #f0fae8 0%, #e5f7de 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.card-content {
+    padding: 32px 28px;
+    background: linear-gradient(135deg, #e5f7de 0%, #d4f0cc 100%);
+}
+
+.card-content h4 {
+    margin: 0 0 12px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #064d19;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.card-content p {
+    margin: 0 0 16px;
+    font-size: 16px;
+    color: #2d5d3f;
+    line-height: 1.4;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+    .ideas-grid {
+        gap: 36px;
+    }
+    
+    .explore-container {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-container {
+        padding: 24px 16px;
+        margin-top: 80px;
+    }
+    
+    .search-section {
+        margin-bottom: 60px;
+        margin-top: 40px;
+    }
+    
+    .search-input {
+        height: 50px;
+        font-size: 16px;
+        padding: 0 60px;
+    }
+    
+    .search-icon {
+        left: 16px;
+        font-size: 20px;
+    }
+    
+    .ideas-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    
+    .card-illustration {
+        height: 220px;
+    }
+    
+    .card-content {
+        padding: 24px 20px;
+    }
+    
+    .card-content h4 {
+        font-size: 20px;
+    }
+    
+    .card-content p {
+        font-size: 15px;
+    }
+
+
+}
+
+/*================== Komponen bersama ==================*/
+
+.badge {
+    font-family: "Kode Mono", monospace;
+    font-size: 13px;
+    background: #2AD400;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.badge-outline {
+    background: transparent;
+    border: 1px solid #2AD400;
+    color: #2AD400;
+}
+
+.btn-small {
+    /* reset gaya dari selector umum "button" di atas (width/height/
+       display/margin-left), supaya tombol ini tidak ikut jadi 200x50px */
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-left: 0;
+
+    font-family: "Kode Mono", monospace;
+    font-size: 14px;
+    background: #12d900;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+
+.btn-small:hover {
+    background: #0fbe00;
+}
+
+.empty-state {
+    font-family: "Kodchasan", sans-serif;
+    opacity: 0.6;
+    text-align: center;
+    padding: 2rem 0;
+    grid-column: 1 / -1;
+}
+
+/*================== hasil.html ==================*/
+
+.hasil-container {
+    display: flex;
+    gap: 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 140px 32px 64px;
+    align-items: flex-start;
+}
+
+.hasil-sidebar {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.hasil-thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: #d9d9d9;
+    border-radius: 16px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.hasil-sidebar h3 {
+    font-family: "Kodchasan", sans-serif;
+    margin: 0 0 4px;
+}
+
+.hasil-skor {
+    font-family: "Kode Mono", monospace;
+    color: #2AD400;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hasil-content {
+    flex: 1;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tab {
+    /* reset gaya dari selector umum "button" di atas (width/height/
+       display/margin-left), supaya tab ini tidak ikut jadi 200x50px */
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-left: 0;
+
+    font-family: "Kode Mono", monospace;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #2AD400;
+    color: #2AD400;
+    border-radius: 16px;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #2AD400;
+    color: #ffffff;
+}
+
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.rec-card {
+    border: 1px solid #74D65C;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rec-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.rec-card-top h4 {
+    margin: 0;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.rec-card-butuh {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.rec-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .hasil-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .hasil-sidebar {
+        width: 160px;
+    }
+
+    .rec-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*================== tutorial.html ==================*/
+
+.tutorial-container {
+    display: flex;
+    gap: 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 140px 32px 64px;
+    align-items: flex-start;
+}
+
+.tutorial-left {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.tutorial-thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: #d9d9d9;
+    border-radius: 16px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.tutorial-left h4 {
+    font-family: "Kodchasan", sans-serif;
+}
+
+.alat-bahan-list {
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.tutorial-right {
+    flex: 1;
+}
+
+.tutorial-right h3 {
+    font-family: "Kodchasan", sans-serif;
+    margin-bottom: 8px;
+}
+
+.tutorial-right h4 {
+    font-family: "Kodchasan", sans-serif;
+    margin-top: 32px;
+}
+
+.langkah-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.langkah-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #2AD400;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+    .tutorial-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .tutorial-left {
+        width: 160px;
+    }
+}
+
+/*================== Akun, Simpan, dan Daftar Simpan ==================*/
+
+[hidden] {
+    display: none !important;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-simpan {
+    background: transparent;
+    border: 1px solid #2AD400;
+    color: #2AD400;
+}
+
+.btn-simpan:hover {
+    background: #2AD400;
+    color: #ffffff;
+}
+
+.btn-simpan:disabled {
+    background: #2AD400;
+    color: #ffffff;
+    opacity: 0.7;
+    cursor: default;
+}
+
+#btn-simpan-tutorial {
+    margin-left: 8px;
+}
+
+/* akun.html */
+
+.akun-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 140px 32px 64px;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.akun-container .tabs {
+    margin-bottom: 16px;
+}
+
+.akun-pesan {
+    min-height: 1.4em;
+    margin: 0 0 12px;
+    color: #c62828;
+    font-size: 15px;
+}
+
+.akun-guest {
+    margin-top: 32px;
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+.akun-guest a,
+.simpan-container a {
+    color: #2AD400;
+}
+
+/* simpan.html */
+
+.simpan-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 32px 64px;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.simpan-container h2 {
+    margin: 0 0 24px;
+}
+
+.simpan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.simpan-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #74D65C;
+    border-radius: 16px;
+    padding: 12px 16px;
+}
+
+.simpan-thumb {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    background: #d9d9d9;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.simpan-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.simpan-info h4 {
+    margin: 0;
+}
+
+.simpan-aksi {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.simpan-aksi label {
+    cursor: pointer;
+}
+
+.simpan-item.selesai .simpan-info h4 {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn-hapus {
+    background: transparent;
+    border: 1px solid #c62828;
+    color: #c62828;
+}
+
+.btn-hapus:hover {
+    background: #c62828;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .simpan-item {
+        flex-wrap: wrap;
+    }
+
+    .simpan-aksi {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/*================== profil.html ==================*/
+.profil-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 132px 32px 72px;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.profil-heading {
+    margin-bottom: 42px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #b7e7aa;
+}
+
+.profil-eyebrow {
+    margin: 0 0 6px;
+    color: #58b944;
+    font-family: "Kode Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.profil-heading h2 {
+    margin: 0 0 8px;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.profil-nama {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.profil-email {
+    margin: 2px 0 0;
+    opacity: .65;
+    font-size: 14px;
+}
+
+.profil-section {
+    margin: 0 0 42px;
+}
+
+.profil-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.profil-section-heading h3 {
+    margin: 0 0 4px;
+    font-family: "Kode Mono", monospace;
+    font-size: 21px;
+}
+
+.profil-section-heading p {
+    margin: 0;
+    font-size: 14px;
+    opacity: .7;
+}
+
+.profil-link-button,
+.profil-text-link {
+    color: #20b900;
+    font-family: "Kode Mono", monospace;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.profil-link-button {
+    border: 1px solid #74D65C;
+    border-radius: 18px;
+    padding: 8px 14px;
+}
+
+.profil-link-button:hover {
+    background: #eaf9e6;
+}
+
+.profil-item {
+    flex-wrap: wrap;
+}
+
+.profil-deskripsi {
+    margin: 0;
+    font-size: 14px;
+    opacity: .75;
+    white-space: pre-wrap;
+}
+
+.profil-actions {
+    flex-direction: row;
+    align-items: center;
+}
+
+.profil-edit-form {
+    flex: 1 0 100%;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 12px;
+    padding: 16px 4px 4px;
+    border-top: 1px solid #d7efd0;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.profil-edit-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+}
+
+.profil-edit-form input,
+.profil-edit-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 38px;
+    border: 1px solid #74D65C;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font: inherit;
+    font-size: 14px;
+}
+
+.profil-edit-form textarea,
+.profil-edit-form label:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.profil-edit-form textarea {
+    resize: vertical;
+}
+
+.profil-edit-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 640px) {
+    .profil-container {
+        padding: 112px 20px 48px;
+    }
+    .profil-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .profil-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .profil-edit-form {
+        grid-template-columns: 1fr;
+    }
+    .profil-edit-form label,
+    .profil-edit-form textarea,
+    .profil-edit-actions {
+        grid-column: 1;
+    }
+}
+
+/*================== Analisa AI (tambahan) ==================*/
+
+/* Layar "Menganalisa" di create.html, gaya sama dengan loading.html */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A9C6AE;
+}
+
+.loading-overlay[hidden] {
+    display: none;
+}
+
+/* hasil.html */
+.rec-card-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.rec-card-ringkasan {
+    margin: 0;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 14px;
+}
+
+.tab[hidden] {
+    display: none;
+}
+
+/* tutorial.html: catatan keselamatan dari AI */
+.tutorial-peringatan {
+    margin-top: 16px;
+    padding: 10px 14px;
+    border-left: 4px solid #f2a900;
+    background: #fff8e1;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 15px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RE:LOOP — Tutorial</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="explore.html">Back</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </header>
+        <main class="tutorial-container">
+            <div class="tutorial-left">
+                <img id="tutorial-gambar" class="tutorial-thumb" src="" alt="">
+                <h4>Alat Bahan</h4>
+                <ul id="alat-bahan-list" class="alat-bahan-list"></ul>
+            </div>
+
+            <div class="tutorial-right">
+                <h3 id="tutorial-nama">Nama Barang</h3>
+                <span class="badge" id="tutorial-tipe">Tipe</span>
+                <button type="button" class="btn-small btn-simpan" id="btn-simpan-tutorial">Simpan</button>
+
+                <h4>Langkah Pembuatan</h4>
+                <ol id="langkah-list" class="langkah-list"></ol>
+                <p id="tutorial-peringatan" class="tutorial-peringatan" hidden></p>
+            </div>
+        </main>
+        <script src="auth.js"></script>
+        <script src="tutorial.js"></script>
+    </body>
+</html>

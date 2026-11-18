@@ -1,0 +1,5 @@
+<?php
+// Salin jadi api/config.local.php lalu isi. File asli JANGAN di-commit (sudah ada di .gitignore).
+define("GEMINI_API_KEY", "ISI_API_KEY_DI_SINI");
+// Cek ID model persisnya di Google AI Studio, lalu sesuaikan.
+define("GEMINI_MODEL", "gemini-3.6-flash");

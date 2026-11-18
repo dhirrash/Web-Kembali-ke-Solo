@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Explore</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body class="explore">
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tutorial.html">Tutorial</a>
+            </nav>
+        </header>
+        <main class="explore-container">    
+            <div class="search-section">
+                <div class="search-box">
+                    <span class="search-icon"></span>
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Mau buat apa?"
+                    >
+                </div>
+            </div>
+
+            <div class="ideas-grid">
+                <div class="idea-card" data-id="7">
+                    <div class="card-illustration">
+                            <img src="assets/lampu hias sendok plastik.jpg" alt="Lampu Hias Sendok Plastik">
+                    </div>
+                    <div class="card-content">
+                        <h4>Lampu Hias Sendok Plastik</h4>
+                        <p>Cahaya cantik dari sendok bekas — hiasan mewah, harga bersahabat!</p>
+                        <div class="card-actions">
+                            <button class="btn-small btn-buat" data-id="7">Buat &gt;</button>
+                            <button class="btn-small btn-simpan" data-id="7">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idea-card" data-id="8">
+                    <div class="card-illustration">
+                            <img src="assets/pot bunga plastik.jpg" alt="Pot Bunga Plastik">
+                    </div>
+                    <div class="card-content">
+                        <h4>Pot Bunga Plastik</h4>
+                        <p>Dari botol bekas jadi vas cantik — rumah lebih hijau, bumi lebih tersenyum!</p>
+                        <div class="card-actions">
+                            <button class="btn-small btn-buat" data-id="8">Buat &gt;</button>
+                            <button class="btn-small btn-simpan" data-id="8">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idea-card" data-id="9">
+                    <div class="card-illustration">
+                            <img src="assets/tempat pensil kaleng.jpg" alt="Tempat Pensil Kaleng">
+                    </div>
+                    <div class="card-content">
+                        <h4>Tempat Pensil Kaleng</h4>
+                        <p>Kaleng bekas pun bisa rapi menata pensilmu — unik, murah, dan ramah lingkungan!</p>
+                        <div class="card-actions">
+                            <button class="btn-small btn-buat" data-id="9">Buat &gt;</button>
+                            <button class="btn-small btn-simpan" data-id="9">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idea-card" data-id="10">
+                    <div class="card-illustration">
+                            <img src="assets/tas kaus bekas.jpg" alt="Tas Kaus Bekas">
+                    </div>
+                    <div class="card-content">
+                        <h4>Tas Kaus Bekas</h4>
+                        <p>Kaos lama, gaya baru — tas jinjing keren tanpa merusak bumi!</p>
+                        <div class="card-actions">
+                            <button class="btn-small btn-buat" data-id="10">Buat &gt;</button>
+                            <button class="btn-small btn-simpan" data-id="10">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="data.js"></script>
+        <script src="auth.js"></script>
+        <script src="explore.js"></script>
+    </body>
+</html>

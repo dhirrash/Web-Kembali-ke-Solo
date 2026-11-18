@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RE:LOOP — Akun</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+            </nav>
+        </header>
+        <main class="akun-container">
+            <div class="tabs">
+                <button type="button" class="tab active" id="tab-login">Login</button>
+                <button type="button" class="tab" id="tab-register">Daftar</button>
+            </div>
+
+            <p id="akun-pesan" class="akun-pesan"></p>
+
+            <form id="form-login" class="akun-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" autocomplete="current-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="form-register" class="akun-form" hidden>
+                <div class="form-group">
+                    <label for="register-nama">Nama</label>
+                    <input type="text" id="register-nama" autocomplete="name" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password (8-72 karakter)</label>
+                    <input type="password" id="register-password" autocomplete="new-password" minlength="8" maxlength="72" required>
+                </div>
+                <button type="submit">Daftar</button>
+            </form>
+
+            <p class="akun-guest">
+                Tidak mau login? <a href="explore.html">Lanjut sebagai guest</a>
+                (daftar simpan hanya tersedia untuk akun).
+            </p>
+        </main>
+        <script src="auth.js"></script>
+        <script src="akun.js"></script>
+    </body>
+</html>

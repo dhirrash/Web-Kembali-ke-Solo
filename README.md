@@ -19,7 +19,10 @@ RE:LOOP membantu pengguna menentukan apa yang bisa dilakukan terhadap barang bek
 1. **Scan Barang** — pengguna mengunggah foto barang, mengisi nama barang, dan kondisi (skala 1–10). AI (Gemini Vision + LLM) mengidentifikasi jenis barang & material, lalu memberi rekomendasi apakah barang lebih cocok di-**reuse** (dipakai ulang langsung) atau di-**upcycle** (diubah jadi barang baru), lengkap dengan contoh ide, tingkat kesulitan, dan bahan tambahan yang dibutuhkan.
 2. **Explore** — jalur sebaliknya, pengguna menjelajahi ide berdasarkan jenis bahan yang dimiliki atau produk yang ingin dibuat, tanpa perlu mengunggah foto.
 
-Aplikasi ini tidak memerlukan login/akun — siapa pun bisa langsung memakainya, dan hasil scan tidak disimpan sebagai riwayat pribadi.
+Aplikasi bisa dipakai dengan **akun** atau sebagai **guest**:
+
+- **Guest** (tanpa login) — bisa menjelajah Explore, membuka tutorial, dan memakai fitur lain tanpa hambatan.
+- **Akun** — selain itu, memiliki halaman **Profil** yang menampilkan inventaris barang pribadi dan **Daftar Simpan**: pengguna dapat menambah, melihat, mengubah, dan menghapus barang inventaris, serta menyimpan ide/tutorial, menandai yang sudah dibuat, dan menghapusnya dari daftar. Menekan tombol Simpan sebagai guest akan mengarahkan ke halaman login.
 
 ---
 
@@ -54,32 +57,58 @@ Secara spesifik, RE:LOOP menyasar sisi **reuse** dan **prevention/reduction** da
 
 ## Skema Database
 
+Sumber kebenaran: `database.sql`. Rincian kolom dan daftar endpoint ada di [docs/skema-database.md](docs/skema-database.md).
+
 ```mermaid
 erDiagram
-    CATEGORIES_BAHAN ||--o{ ARTICLES : "bahan utama"
-    CATEGORIES_PRODUK ||--o{ ARTICLES : "hasil akhir"
+    USERS ||--o{ DAFTAR_SIMPAN : "menyimpan"
+    ITEMS ||--o{ DAFTAR_SIMPAN : "disimpan di"
+    ITEMS ||--o{ ITEM_BAHAN : "butuh"
+    ITEMS ||--o{ ITEM_LANGKAH : "punya"
 
-    CATEGORIES_BAHAN {
-        bigint id PK
-        string nama_bahan
+    USERS {
+        int id PK
+        varchar nama
+        varchar email UK
+        varchar password_hash
+        timestamp created_at
     }
-    CATEGORIES_PRODUK {
-        bigint id PK
-        string nama_kategori_produk
+    ITEMS {
+        int id PK
+        varchar nama
+        varchar tipe
+        varchar gambar
     }
-    ARTICLES {
-        bigint id PK
-        bigint bahan_id FK
-        bigint produk_id FK
-        string kondisi_target
-        string tipe
-        string judul
-        string nama_produk_hasil
-        text deskripsi
-        text langkah_langkah
-        string tingkat_kesulitan
-        string bahan_tambahan
-        string url_gambar
-        string sumber
+    ITEM_BAHAN {
+        int id PK
+        int item_id FK
+        varchar bahan
+        int urutan
+    }
+    ITEM_LANGKAH {
+        int id PK
+        int item_id FK
+        text langkah
+        int urutan
+    }
+    DAFTAR_SIMPAN {
+        int id PK
+        int user_id FK
+        int item_id FK
+        tinyint sudah_dibuat
+        timestamp disimpan_pada
     }
 ```
+
+CRUD daftar simpan: **Create** = simpan item, **Read** = lihat daftar, **Update** = tandai sudah/belum dibuat, **Delete** = hapus dari daftar.
+
+CRUD inventaris barang pribadi: halaman **Create** menyimpan nama, kondisi, dan deskripsi barang ke tabel `user_barang` (wajib login). Halaman **Profil** menampilkan inventaris dan menyediakan Read, Update, dan Delete; endpoint `api/user-items.php` mendukung GET, POST, PATCH, dan DELETE; detail request ada di `docs/skema-database.md`. Gambar yang dipilih pada halaman Create masih berupa preview lokal dan belum disimpan ke server/database.
+
+---
+
+## Menjalankan Proyek
+
+1. Jalankan Apache dan MySQL (XAMPP), lalu taruh folder proyek di `htdocs`.
+2. Import `database.sql` lewat phpMyAdmin. File ini membuat ulang semua tabel, jadi akun dan daftar simpan yang sudah ada ikut terhapus.
+3. Sesuaikan kredensial di `db.php` bila perlu (default XAMPP: user `root`, tanpa password).
+4. Buka `http://localhost/<nama-folder>/index.html`.
